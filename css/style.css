@@ -1,0 +1,47 @@
+@font-face {
+    font-family: comicn;
+    src: url(../fonts/ComicNeue-Bold.ttf);
+}
+
+body {
+    background-color: #282B30;
+    font-family: comicn;
+}
+
+header {
+    height: 200px;
+    background-image: url(../imgs/wraper.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: #3A497B;
+}
+
+.active {
+    color: #0099CC !important;
+}
+
+.nav-item .nav-link {
+    transition: 0.4s;
+}
+
+.nav-item .nav-link:hover {
+    color: #0099CC !important;
+}
+
+.badge-color {
+    background-color: #32383E;
+}
+
+.home .card {
+    filter: grayscale(0.7);
+    transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.home .card:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
