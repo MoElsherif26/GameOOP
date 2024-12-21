@@ -4,7 +4,7 @@ export class Ui {
         games.forEach(game => {
             var content = `
     <div class="col">
-                        <div data-id="${game.id}" class="card h-100 bg-transparent" role="button">
+                        <div data-id="${game.id}" class="card card-game h-100 bg-transparent" role="button">
                             <div class=" card-body">
 
                                 <figure class="position-relative">
@@ -39,5 +39,21 @@ export class Ui {
             cartona += content;
         });
         gameData.innerHTML = cartona;
+    }
+
+    displayGameDetails(game) {
+        const detailsContent = document.getElementById('detailsContent');
+        detailsContent.innerHTML = `
+            <div class="col-md-4">
+                <img src="${game.thumbnail}" class="w-100" alt="image details">
+            </div>
+            <div class="col-md-8">
+                <h3 class="text-white">Title: ${game.title}</h3>
+                <p class="text-white">Category: <span class="badge text-bg-info"> ${game.genre}</span> </p>
+                <p class="text-white">Platform: <span class="badge text-bg-info"> ${game.platform}</span> </p>
+                <p class="text-white">Status: <span class="badge text-bg-info"> ${game.status}</span> </p>
+                <p class="small text-white">${game.description}</p>
+                <a class="btn btn-outline-warning text-white" target="_blank" href="${game.game_url}">Show Game</a>
+            </div>`;
     }
 }
